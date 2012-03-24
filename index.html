@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <title>Timepicker Example</title>
+
+    <link rel="stylesheet" href="css/smoothness/jquery-ui-1.8.18.custom.css" type="text/css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="timepicker.css" media="screen">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <!--<script src="js/jquery-ui-1.8.18.custom.min.js" type="text/javascript"></script>-->
+    <script type="text/javascript" src="https://raw.github.com/janl/mustache.js/master/mustache.js"></script>
+    <script type="text/javascript" src="timepicker.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var timeAsleepTimepicker = new Timepicker($('#start_time'));
+            var timeAwakeTimepicker = new Timepicker($('#end_time'));
+        });
+    </script>
+
+</head>
+<body>
+<div>
+    <form>
+        <fieldset id="addSleepSection">
+            <label for="start_time" class="control-label">Start time</label>
+            <input id="start_time" name="start_time" maxlength="8" class="timepicker">
+
+            <label for="end_time" class="control-label">End time</label>
+            <input id="end_time" name="end_time" maxlength="8" class="timepicker">
+        </fieldset>
+    </form>
+</div>
+<script id="timepicker_template" type="text/x-mustache-template">
+    <div id="{{name}}" class="ui-helper-reset ui-timepickr ui-widget" style="left: 0; display: none; ">
+        <ol class="ui-timepickr-row ui-helper-clearfix hours" style="display: block; ">
+            <li class="ui-timepickr-button"><span class="timeBox">1</span></li>
+            <li class="ui-timepickr-button"><span class="timeBox">2</span></li>
+            <li class="ui-timepickr-button"><span class="timeBox">3</span></li>
+            <li class="ui-timepickr-button"><span class="timeBox">4</span></li>
+            <li class="ui-timepickr-button"><span class="timeBox">5</span></li>
+            <li class="ui-timepickr-button"><span class="timeBox">6</span></li>
+            <li class="ui-timepickr-button"><span class="timeBox">7</span></li>
+            <li class="ui-timepickr-button"><span class="timeBox">8</span></li>
+            <li class="ui-timepickr-button"><span class="timeBox">9</span></li>
+            <li class="ui-timepickr-button"><span class="timeBox">10</span></li>
+            <li class="ui-timepickr-button"><span class="timeBox">11</span></li>
+            <li class="ui-timepickr-button"><span class="timeBox">12</span></li>
+        </ol>
+        <ol class="ui-timepickr-row ui-helper-clearfix minutes" style="display: none; left: 226px; ">
+            <li class="ui-timepickr-button"><span class="timeBox">00</span></li>
+            <li class="ui-timepickr-button"><span class="timeBox">15</span></li>
+            <li class="ui-timepickr-button"><span class="timeBox">30</span></li>
+            <li class="ui-timepickr-button"><span class="timeBox">45</span></li>
+        </ol>
+        <ol class="ui-timepickr-row ui-helper-clearfix ampm" style="display: none; left: 310px; ">
+            <li class="ui-timepickr-button"><span class="timeBox">am</span></li>
+            <li class="ui-timepickr-button"><span class="timeBox">pm</span></li>
+        </ol>
+    </div>
+</script>
+</body>
+</html>
