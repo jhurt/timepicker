@@ -3,3 +3,11 @@ timepicker is a jQuery plugin for providing time selection for web forms.
 This version is based on jquery.timepicker.js from http://code.google.com/p/jquery-utils/wiki/UiTimepickr
 We removed the dependency on jQuery UI and stripped out the 24 hour option.
 It is licensed under the MIT license.
+
+To run with nodejs:
+
+$> npm install connnect
+$> node server.js
+
+browse to http://localhost:8080/
+

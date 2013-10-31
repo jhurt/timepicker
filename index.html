@@ -5,7 +5,7 @@
 
     <link rel="stylesheet" type="text/css" href="timepicker.css" media="screen">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="https://raw.github.com/janl/mustache.js/master/mustache.js"></script>
+    <script type="text/javascript" src="mustache.js"></script>
     <script type="text/javascript" src="timepicker.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -19,11 +19,8 @@
 <div>
     <form>
         <fieldset id="addSleepSection">
-            <label for="start_time" class="control-label">Start time</label>
-            <input id="start_time" name="start_time" maxlength="8" class="timepicker">
-
-            <label for="end_time" class="control-label">End time</label>
-            <input id="end_time" name="end_time" maxlength="8" class="timepicker">
+            <label style="display:block" for="start_time" class="control-label">Start time</label>
+            <input style="display:block" id="start_time" name="start_time" maxlength="8" class="timepicker">
         </fieldset>
     </form>
 </div>
